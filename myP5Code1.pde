@@ -3,13 +3,15 @@ setup = function() {
 };
 
 //Background Images
-var caveSceneImage = loadImage("https://www.shutterstock.com/image-vector/vector-illustration-background-forest-scenery-600nw-1807427365.jpg");
+var snoopyImage = loadImage("https://i.pinimg.com/736x/69/6d/f8/696df8538a424133eff21f91669d7dd2.jpg");
 
-var forestImage = loadImage("https://t3.ftcdn.net/jpg/02/50/39/72/360_F_250397206_HuBj2V5oEytcqonzpzum4IjEjtAsZq3g.jpg");
+var flyImage = loadImage("https://people.com/thmb/HSSthZrlQs5G6NxljQoY5Jj55I8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/snoopy-1f5571532ca54022b5eae307ab3381d6.jpg");
+
+var snoopyDanceImage = loadImage("https://i.pinimg.com/originals/c4/fb/9b/c4fb9b892452ee310381f66d5c2002bb.gif");
 
 //Variable Declarations
-var sceneImage = caveSceneImage;
-var sceneText = "Where do you want to go?  [Press f for forest and c for cave]";
+var sceneImage = snoopyImage;
+var sceneText = "Lets take Snoopy on an adventure!  [Press f to fly]";
 
 draw = function(){
     
@@ -18,13 +20,17 @@ draw = function(){
 
    if(keyPressed){
      if(key == 'f'){
-       sceneImage = forestImage;   
-       sceneText = "No fox here.  [Press s to restart]";
+       sceneImage = flyImage;   
+       sceneText = "WEEEEEE!.  [Press d to lands to restart]";
      } 
      if(key == 's'){
-      sceneImage = caveSceneImage;
-      sceneText = "Where do you want to go?  [Press f for forest and c for cave]";
+      sceneImage = snoopyImage;
+      sceneText = "Lets take Snoopy on an adventure!  [Press f to fly]";
     } 
+     if(key == 'd'){
+       sceneImage = snoopyDanceImage
+       sceneText = "We found Mary and Rerun, lets dance!";
+     }
    }
   
 };
